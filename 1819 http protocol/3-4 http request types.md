@@ -12,3 +12,8 @@ similar to get, but only request the header
 delete a resource at uri
 -options
 check what request types a resource at uri supports
+-trace
+performs a message loop-back test along the path to the target resource, used for debugging
+-connect
+starts two-way communications with the requested resource, can be used to open a tunnel
+can be used in a proxy server
