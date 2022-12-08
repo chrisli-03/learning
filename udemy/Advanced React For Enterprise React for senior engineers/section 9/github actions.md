@@ -37,4 +37,21 @@ this tells github to run on push and pull request to master branch
 
 the environment will be `ubuntu-latest`,  it checks out code first, then installs dependencies, then runs build, then runs tests, and run chromatic tests
 
+### Creating github secret
+
+instead of hardcoding secrets in places like `packages.json` file, when you are using github actions you can create a secret on github under settings of your repo
+
+for example the secret you created is `CHROMATIC_PROJECT_TOKEN`, you can use it in github actions like
+
+```json
+env:
+    CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+```
+
+in the `package.json` file you originally had the secret, change it to use environment variable
+
+```json
+"test:chromatic": "chromatic --project-token=\"$CHROMATIC_PROJECT_TOKEN\"""
+```
+
 
