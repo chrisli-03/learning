@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "vue": "^2.6.10",
-    "vue-server-renderer": "^2.6.10"
+    "vue-server-renderer": "^2.7.14"
   },
   "devDependencies": {
     "nodemon": "^2.0.1"
