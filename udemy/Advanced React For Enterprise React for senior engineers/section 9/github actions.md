@@ -54,4 +54,18 @@ in the `package.json` file you originally had the secret, change it to use envir
 "test:chromatic": "chromatic --project-token=\"$CHROMATIC_PROJECT_TOKEN\"""
 ```
 
+### Deploy storybook to netlify
+
+first add a script for netlify, which builds the project and storybook
+
+```json
+"build:storybook": "yarn build && yarn lerna build-storybook"
+```
+
+on netlify, click get new app from git, search for you repo, select the correct branch and add the build command
+
+for publish directory, put the storybook build path, in this case `packages/react/storybook-static`
+
+then click deploy
+
 
