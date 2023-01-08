@@ -24,6 +24,10 @@ ie. given notes, when deleting, then remove a note
 
 bdd consists of senarios/specifications
 
+##### Test driven development
+
+Start with writing test that cover the functionalities, then write code to pass the tests
+
 ##### Describe vs it
 
 describe is for grouping tests together, it is an individual test
@@ -44,5 +48,3 @@ in package.json add a config to indicate what files to test
     ]
 }
 ```
-
-
